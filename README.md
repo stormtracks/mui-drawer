@@ -17,7 +17,7 @@ the tag **florida**.
 ### The Details
 
 withRoot.js should be an exact copy of
-[this file](https://github.com/mui-org/material-ui/blob/v1-beta/examples/create-react-app/src/withRoot.js)
+[this file](https://github.com/mui-org/material-ui/commits/v1-beta/examples/create-react-app/src/withRoot.js)
 
 When ever changes happen to these (2) files you need to update this code...
 
