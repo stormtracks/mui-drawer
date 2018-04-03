@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "classnames": "^2.2.5",
-    "jss": "latest",
+    "classnames": "latest",
     "lodash": "latest",
     "material-ui": "next",
-    "material-ui-icons": "1.0.0-beta.17",
-    "next": "^4.1.4",
+    "material-ui-icons": "1.0.0-beta.36",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-jss": "latest",
     "react-scripts": "latest",
     "react-router-dom": "latest"
   },
