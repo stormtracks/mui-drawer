@@ -13,3 +13,14 @@ I had gotten working while I was in Florida...
 
 Until the 1.0 release happens this code will be referenced with
 the tag **florida**.
+
+### The Details
+
+withRoot.js should be an exact copy of
+[this file](https://github.com/mui-org/material-ui/blob/v1-beta/examples/create-react-app/src/withRoot.js)
+
+When ever changes happen to these (2) files you need to update this code...
+
+[AppDrawer.js](https://github.com/mui-org/material-ui/commits/v1-beta/docs/src/modules/components/AppDrawer.js)
+
+[AppDrawerNavItem.js](https://github.com/mui-org/material-ui/commits/v1-beta/docs/src/modules/components/AppDrawerNavItem.js)
