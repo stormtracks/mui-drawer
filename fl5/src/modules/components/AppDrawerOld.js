@@ -54,10 +54,6 @@ function renderNavItems({ pages, ...params }) {
 }
 
 function reduceChildRoutes({ props, activePage, items, page, depth }) {
-  if (page.displayNav === false) {
-    return items;
-  }
-
   if (page.children && page.children.length > 1) {
     const title = pageToTitle(page);
     const openImmediately = activePage.pathname.indexOf(page.pathname) === 0;
@@ -67,7 +63,7 @@ function reduceChildRoutes({ props, activePage, items, page, depth }) {
         {renderNavItems({ props, pages: page.children, activePage, depth: depth + 1 })}
       </AppDrawerNavItem>,
     );
-  } else {
+  } else if (page.title !== false) {
     const title = pageToTitle(page);
     page = page.children && page.children.length === 1 ? page.children[0] : page;
 
@@ -85,16 +81,23 @@ function reduceChildRoutes({ props, activePage, items, page, depth }) {
   return items;
 }
 
+// const GITHUB_RELEASE_BASE_URL = 'https://github.com/mui-org/material-ui/releases/tag/';
 // iOS is hosted on high-end devices. We can enable the backdrop transition without
 // dropping frames. The performance will be good enough.
-// So: <SwipeableDrawer disableBackdropTransition={false} />
+// iOS has a "swipe to go back" feature that mess with the discovery feature.
+// We have to disable it.
+// So: <SwipeableDrawer disableBackdropTransition={false} disableDiscovery={true} />
 const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-function AppDrawer(props, context) {
+function AppDrawerOld(props, context) {
   const { classes, className, disablePermanent, mobileOpen, onClose, onOpen } = props;
 
   const drawer = (
     <div className={classes.nav}>
+      <div className={classes.toolbarIe11}>
+        <div className={classes.toolbar}>
+        </div>
+      </div>
       <Divider />
       {renderNavItems({ props, pages: context.pages, activePage: context.activePage, depth: 0 })}
     </div>
@@ -108,6 +111,7 @@ function AppDrawer(props, context) {
             paper: classNames(classes.paper, 'algolia-drawer'),
           }}
           disableBackdropTransition={!iOS}
+          disableDiscovery={iOS}
           variant="temporary"
           open={mobileOpen}
           onOpen={onOpen}
@@ -136,7 +140,7 @@ function AppDrawer(props, context) {
   );
 }
 
-AppDrawer.propTypes = {
+AppDrawerOld.propTypes = {
   classes: PropTypes.object.isRequired,
   className: PropTypes.string,
   disablePermanent: PropTypes.bool.isRequired,
@@ -145,9 +149,9 @@ AppDrawer.propTypes = {
   onOpen: PropTypes.func.isRequired,
 };
 
-AppDrawer.contextTypes = {
+AppDrawerOld.contextTypes = {
   activePage: PropTypes.object.isRequired,
   pages: PropTypes.array.isRequired,
 };
 
-export default withStyles(styles)(AppDrawer);
+export default withStyles(styles)(AppDrawerOld);
