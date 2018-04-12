@@ -19,12 +19,12 @@ the tag **florida**.
 ### The Details
 
 withRoot.js should be an exact copy of
-[this file](https://github.com/mui-org/material-ui/commits/v1-beta/examples/create-react-app/src/withRoot.js)
+[withRoot.js](https://github.com/mui-org/material-ui/commits/v1-beta/examples/create-react-app/src/withRoot.js)
 
 helpers.js should be an exact copy of
 [helpers.js](https://github.com/mui-org/material-ui/commits/v1-beta/docs/src/modules/utils/helpers.js)
 
-When ever changes happen to these (3) files you need to update this code...
+When ever changes happen to these (2) files you need to update this code...
 
 [AppDrawer.js](https://github.com/mui-org/material-ui/commits/v1-beta/docs/src/modules/components/AppDrawer.js)
 
