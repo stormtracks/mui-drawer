@@ -1,14 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import List from 'material-ui/List';
-import Drawer from 'material-ui/Drawer';
-import SwipeableDrawer from 'material-ui/SwipeableDrawer';
-import Divider from 'material-ui/Divider';
-import Hidden from 'material-ui/Hidden';
-import AppDrawerNavItem from './AppDrawerNavItem';
-import { pageToTitle } from './../utils/helpers';
+import { withStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import Hidden from '@material-ui/core/Hidden';
+import AppDrawerNavItem from 'docs/src/modules/components/AppDrawerNavItem';
+import Link from 'docs/src/modules/components/Link';
+import { pageToTitle } from 'docs/src/modules/utils/helpers';
 
 const styles = theme => ({
   paper: {
@@ -95,6 +97,20 @@ function AppDrawer(props, context) {
 
   const drawer = (
     <div className={classes.nav}>
+      <div className={classes.toolbarIe11}>
+        <div className={classes.toolbar}>
+          <Link className={classes.title} href="/" onClick={onClose}>
+            <Typography variant="title" color="inherit">
+              Material-UI
+            </Typography>
+          </Link>
+          {process.env.LIB_VERSION ? (
+            <Link className={classes.anchor} href="/versions">
+              <Typography variant="caption">{`v${process.env.LIB_VERSION}`}</Typography>
+            </Link>
+          ) : null}
+        </div>
+      </div>
       <Divider />
       {renderNavItems({ props, pages: context.pages, activePage: context.activePage, depth: 0 })}
     </div>
