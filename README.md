@@ -25,7 +25,7 @@ When ever changes happen to these (2) files you need to update this code...
 
 [AppDrawerNavItem.js](https://github.com/mui-org/material-ui/commits/master/docs/src/modules/components/AppDrawerNavItem.js)
 
-## fl6-appframe
+### fl6-appframe
 
 This is **fl6** with an off the shelf AppFrame
 instead of using
