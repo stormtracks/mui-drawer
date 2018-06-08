@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import Button from '@material-ui/core/Button';
 import Collapse from '@material-ui/core/Collapse';
-import Link from 'docs/src/modules/components/Link';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   item: {
@@ -81,7 +81,7 @@ class AppDrawerNavItem extends React.Component {
         <ListItem className={classes.itemLeaf} disableGutters {...other}>
           <Button
             component={props => (
-              <Link variant="button" activeClassName={classes.active} href={href} {...props} />
+              <Link variant="button" activeClassName={classes.active} to={href} href={href} {...props} />
             )}
             className={classNames(classes.buttonLeaf, `depth-${depth}`)}
             disableRipple
