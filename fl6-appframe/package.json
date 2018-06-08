@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.2.0",
-    "@material-ui/docs": "^1.0.0-alpha.3",
     "@material-ui/icons": "^1.1.0",
     "classnames": "latest",
     "lodash": "latest",
