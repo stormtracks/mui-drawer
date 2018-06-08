@@ -25,11 +25,11 @@ When ever changes happen to these (2) files you need to update this code...
 
 [AppDrawerNavItem.js](https://github.com/mui-org/material-ui/commits/master/docs/src/modules/components/AppDrawerNavItem.js)
 
-### flX-appframe
+### flx-appframe
 
-**flX** does not have an AppFrame in it...
+**flx** does not have an AppFrame in it...
 
-This is **flX** with an off the shelf
+This is **flx** with an off the shelf
 [AppFrame](https://github.com/mui-org/material-ui/commits/master/docs/src/modules/components/AppFrame.js)
 instead of using
 [Drawer6](https://github.com/stormasm/florida-mui/commits/master/fl6/src/pages/Drawer6.js)
