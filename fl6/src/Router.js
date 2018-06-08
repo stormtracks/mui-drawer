@@ -5,7 +5,7 @@ import {
   withRouter
 } from 'react-router-dom'
 
-import Nav from './pages/Drawer4'
+import Nav from './pages/Drawer6'
 
 const MyNav = withRouter(Nav);
 
