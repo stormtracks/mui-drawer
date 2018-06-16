@@ -1,5 +1,11 @@
 # florida-mui
 
+**June 16, 2018**
+
+This code is finished for awhile, in the future as material-ui
+evolves I will periodically update this code with the latest
+versions of the essential files documented below.
+
 So I got this working with the
 [v1.2.1](https://github.com/mui-org/material-ui/releases/tag/v1.2.1)
 
