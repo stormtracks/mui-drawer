@@ -16,41 +16,8 @@ import AppDrawer from './AppDrawer';
 
 const styles = theme => ({
   root: {
-    display: 'flex',
-    alignItems: 'stretch',
-    minHeight: '100vh',
-    width: '100%',
-  },
-  grow: {
-    flex: '1 1 auto',
-  },
-  title: {
-    marginLeft: 24,
-    flex: '0 1 auto',
-  },
-  appBar: {
-    transition: theme.transitions.create('width'),
-    '@media print': {
-      position: 'absolute',
-    },
-  },
-  appBarHome: {
-    boxShadow: 'none',
-  },
-  appBarShift: {
-    [theme.breakpoints.up('lg')]: {
-      width: 'calc(100% - 250px)',
-    },
-  },
-  drawer: {
-    [theme.breakpoints.up('lg')]: {
-      width: 250,
-    },
-  },
-  navIconHide: {
-    [theme.breakpoints.up('lg')]: {
-      display: 'none',
-    },
+    textAlign: 'center',
+    paddingTop: theme.spacing.unit * 20,
   },
 });
 
