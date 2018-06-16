@@ -1,15 +1,7 @@
 # florida-mui
 
 So I got this working with the
-[v1.2.0](https://github.com/mui-org/material-ui/releases/tag/v1.2.0)
-
-[here is the commit time stamp](https://github.com/mui-org/material-ui/commit/4ff3588dd268a83704cc55bfdbddb935c2f130ec)
-
-This translates to **June 8, 2018**
-
-I ported this over from
-[this working version](https://github.com/stormasm/react-router-mui)
-I had gotten working while I was in Florida...
+[v1.2.1](https://github.com/mui-org/material-ui/releases/tag/v1.2.1)
 
 ### The Details
 
