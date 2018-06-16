@@ -17,6 +17,17 @@ When ever changes happen to these (2) files you need to update this code...
 
 [AppDrawerNavItem.js](https://github.com/mui-org/material-ui/commits/master/docs/src/modules/components/AppDrawerNavItem.js)
 
+##### Going forward I no longer need to support AppFrame
+
+As I continue to upgrade this code over time **fl8** and forward
+will go back to my own custom simple AppFrame / Drawer6 which
+will be called Drawer6.
+
+I will no longer need to port AppFrame over, remove the un-used code
+etc...  But I will need to continue to port up AppDrawer and AppDrawerNavItem.
+
+Leave the notes below here for historical purposes.
+
 ### Appframe
 
 As of **fl7** the AppFrame and Drawer code are in the same directory.
