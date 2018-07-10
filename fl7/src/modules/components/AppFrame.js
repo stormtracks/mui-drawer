@@ -174,10 +174,10 @@ class AppFrame extends React.Component {
         />
 
         <Typography type="display1" gutterBottom>
-          Material-UI
+          Material-UI Drawer
         </Typography>
         <Typography type="subheading" gutterBottom>
-          Drawer using create-react-app...
+          using create-react-app...
         </Typography>
 
         <div style={{ flex: 1, padding: "10px" }}>

@@ -10,10 +10,10 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 import find from "lodash/find";
-import withRoot from "../withRoot";
+import withRoot from "./withRoot";
 
 import { Route } from "react-router-dom";
-import AppDrawer from "./../modules/components/AppDrawer";
+import AppDrawer from "./modules/components/AppDrawer";
 
 const styles = theme => ({
   root: {
@@ -159,10 +159,10 @@ class Index extends React.Component {
         />
 
         <Typography type="display1" gutterBottom>
-          Material-UI
+          Material-UI Drawer
         </Typography>
         <Typography type="subheading" gutterBottom>
-          Drawer using create-react-app...
+          using create-react-app...
         </Typography>
 
         <div style={{ flex: 1, padding: "10px" }}>
