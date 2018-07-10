@@ -1,74 +1,74 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import AppBar from '@material-ui/core/AppBar';
-import IconButton from '@material-ui/core/IconButton';
+import AppBar from "@material-ui/core/AppBar";
+import IconButton from "@material-ui/core/IconButton";
 
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import MenuIcon from "@material-ui/icons/Menu";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
 
-import find from 'lodash/find';
-import withRoot from '../withRoot';
+import find from "lodash/find";
+import withRoot from "../withRoot";
 
-import { Route } from 'react-router-dom'
-import AppDrawer from './../modules/components/AppDrawer';
+import { Route } from "react-router-dom";
+import AppDrawer from "./../modules/components/AppDrawer";
 
 const styles = theme => ({
   root: {
-    textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
-  },
+    textAlign: "center",
+    paddingTop: theme.spacing.unit * 20
+  }
 });
 
 const pages = [
   {
-    pathname: '/ch1',
+    pathname: "/ch1",
     children: [
       {
-        pathname: '/ch1/sec1',
+        pathname: "/ch1/sec1"
       },
       {
-        pathname: '/ch1/sec2',
+        pathname: "/ch1/sec2"
       },
       {
-        pathname: '/ch1/sec3',
-      },
-    ],
+        pathname: "/ch1/sec3"
+      }
+    ]
   },
   {
-    pathname: '/ch2',
+    pathname: "/ch2",
     children: [
       {
-        pathname: '/ch2/sec1',
+        pathname: "/ch2/sec1"
       },
       {
-        pathname: '/ch2/sec2',
+        pathname: "/ch2/sec2"
       },
       {
-        pathname: '/ch2/sec3',
-      },
-    ],
+        pathname: "/ch2/sec3"
+      }
+    ]
   },
   {
-    pathname: '/ch3',
+    pathname: "/ch3",
     children: [
       {
-        pathname: '/ch3/sec1',
+        pathname: "/ch3/sec1"
       },
       {
-        pathname: '/ch3/sec2',
+        pathname: "/ch3/sec2"
       },
       {
-        pathname: '/ch3/sec3',
-      },
-    ],
+        pathname: "/ch3/sec3"
+      }
+    ]
   },
   {
-    pathname: '/',
-    title: false,
-  },
+    pathname: "/",
+    title: false
+  }
 ];
 
 function findActivePage(currentPages, url) {
@@ -98,23 +98,21 @@ const ShowChapterSection = ({ match }) => (
     <h3>Chapter: {match.params.ch}</h3>
     <h4>Section: {match.params.sec}</h4>
   </div>
-)
+);
 
 class Index extends React.Component {
-
   state = {
-    mobileOpen: false,
+    mobileOpen: false
   };
 
   getChildContext() {
-
     let myurl = {};
-    myurl.pathname = this.props.history.location.pathname
+    myurl.pathname = this.props.history.location.pathname;
 
     return {
       url: myurl ? myurl : null,
       pages,
-      activePage: findActivePage(pages, myurl),
+      activePage: findActivePage(pages, myurl)
     };
   }
 
@@ -124,13 +122,12 @@ class Index extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const title = 'Hola from Florida'
+    const title = "Hola from the Drawer";
     let appBarClassName = classes.appBar;
-    let navIconClassName = '';
+    let navIconClassName = "";
 
     return (
       <div className={classes.root}>
-
         <AppBar className={appBarClassName}>
           <Toolbar>
             <IconButton
@@ -142,7 +139,12 @@ class Index extends React.Component {
               <MenuIcon />
             </IconButton>
             {title !== null && (
-              <Typography className={classes.title} type="title" color="inherit" noWrap>
+              <Typography
+                className={classes.title}
+                type="title"
+                color="inherit"
+                noWrap
+              >
                 {title}
               </Typography>
             )}
@@ -157,32 +159,28 @@ class Index extends React.Component {
         />
 
         <Typography type="display1" gutterBottom>
-          Florida
+          Material-UI
         </Typography>
         <Typography type="subheading" gutterBottom>
-          has 20 million people...
+          Drawer using create-react-app...
         </Typography>
 
-        <div style={{ flex: 1, padding: '10px' }}>
-            <Route
-              path="/:ch/:sec"
-              component={ShowChapterSection}
-            />
+        <div style={{ flex: 1, padding: "10px" }}>
+          <Route path="/:ch/:sec" component={ShowChapterSection} />
         </div>
-
       </div>
     );
   }
 }
 
 Index.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 Index.childContextTypes = {
   url: PropTypes.object,
   pages: PropTypes.array,
-  activePage: PropTypes.object,
+  activePage: PropTypes.object
 };
 
 export default withRoot(withStyles(styles)(Index));
