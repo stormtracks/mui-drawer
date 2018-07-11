@@ -1,9 +1,10 @@
 {
-  "name": "florida-mui",
+  "name": "mui-drawer",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.3.1",
+    "@material-ui/docs": "^1.0.0-alpha.3",
     "@material-ui/icons": "^1.1.0",
     "classnames": "latest",
     "lodash": "latest",

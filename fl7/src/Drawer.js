@@ -15,6 +15,9 @@ import withRoot from "./withRoot";
 import { Route } from "react-router-dom";
 import AppDrawer from "./modules/components/AppDrawer";
 
+import Tooltip from '@material-ui/core/Tooltip';
+import GithubIcon from '@material-ui/docs/svgIcons/GitHub';
+
 const styles = theme => ({
   root: {
     textAlign: "center",
@@ -148,6 +151,16 @@ class Index extends React.Component {
                 {title}
               </Typography>
             )}
+            <Tooltip title="GitHub repository" enterDelay={300}>
+              <IconButton
+                component="a"
+                color="inherit"
+                href="https://github.com/stormasm/mui-drawer"
+                aria-label="GitHub repository"
+              >
+                <GithubIcon />
+              </IconButton>
+            </Tooltip>
           </Toolbar>
         </AppBar>
 
