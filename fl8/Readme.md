@@ -22,21 +22,31 @@ When ever changes happen to these (2) files you need to update this code...
 
 [AppDrawerNavItem.js](https://github.com/mui-org/material-ui/commits/master/docs/src/modules/components/AppDrawerNavItem.js)
 
-### AppDrawer Changes to file from original
+#### AppDrawer Changes to file from original
 
 Remove
+```
 import Link from 'docs/src/modules/components/Link';
 import Typography from '@material-ui/core/Typography';
+```
 
 From this
+```
 import AppDrawerNavItem from 'docs/src/modules/components/AppDrawerNavItem';
+```
 to this
+```
 import AppDrawerNavItem from './AppDrawerNavItem';
+```
 
 From this
+```
 import { pageToTitle } from 'docs/src/modules/utils/helpers';
+```
 to this
+```
 import { pageToTitle } from './../utils/helpers';
+```
 
 Remove this code completely from the AppDrawer
 
@@ -57,14 +67,16 @@ Remove this code completely from the AppDrawer
 </div>
 ```
 
-### AppDrawerNavItem Changes to file from original
-
-
+#### AppDrawerNavItem Changes to file from original
 
 From this
+```
 import Link from 'docs/src/modules/components/Link';
+```
 to this
+```
 import { Link } from 'react-router-dom';
+```
 
 Add in the **to** property to this line of code
 ```
