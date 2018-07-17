@@ -1,7 +1,14 @@
+To get up and running
+
+```
+cd fl8
+yarn [or] npm install
+npm start
+```
 
 **July 16, 2018**
 
-##### fl8 is the latest version of code that should be run...
+**fl8** is the latest version of code that should be run...
 
 fl8 matches up with
 [v1.4.0](https://github.com/mui-org/material-ui/releases/tag/v1.4.0)
