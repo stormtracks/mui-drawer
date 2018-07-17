@@ -1,12 +1,18 @@
 
 **July 16, 2018**
 
+##### fl8 is the latest version of code that should be run...
+
+fl8 matches up with
+[v1.4.0](https://github.com/mui-org/material-ui/releases/tag/v1.4.0)
+
 This code is finished for awhile, in the future as material-ui
 evolves I will periodically update this code with the latest
 versions of the essential files documented below.
 
-So I got this working with the
-[v1.4.0](https://github.com/mui-org/material-ui/releases/tag/v1.4.0)
+As Material-UI continues to evolve I will leave the versions
+in place in their respective directories along with the
+associated Readme files.
 
 ### The Details
 
